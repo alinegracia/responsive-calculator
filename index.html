@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div id="head" class="flex space">
+        <h1>calc</h1>
+        <div id="sub-header" class="flex">
+            <h2>THEME</h2>
+            <div>
+                <div class="flex space">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                </div>
+                
+                <div class="container">
+                    <div id="circle" class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons-1">
+            <button onclick="appendToDisplay('7')" class="btn-color1">7</button>
+            <button onclick="appendToDisplay('8')" class="btn-color1">8</button>
+            <button onclick="appendToDisplay('9')" class="btn-color1">9</button>
+            <button onclick="deleteLast()" class="btn-color2">DEL</button>
+
+            <button onclick="appendToDisplay('4')" class="btn-color1">4</button>
+            <button onclick="appendToDisplay('5')" class="btn-color1">5</button>
+            <button onclick="appendToDisplay('6')" class="btn-color1">6</button>
+            <button onclick="appendToDisplay('+')" class="btn-color1">+</button>
+
+            <button onclick="appendToDisplay('1')" class="btn-color1">1</button>
+            <button onclick="appendToDisplay('2')" class="btn-color1">2</button>
+            <button onclick="appendToDisplay('3')" class="btn-color1">3</button>
+            <button onclick="appendToDisplay('-')" class="btn-color1">-</button>
+
+            <button onclick="appendToDisplay('0')" class="btn-color1">0</button>
+            <button onclick="appendToDisplay('.')" class="btn-color1">.</button>
+            <button onclick="appendToDisplay('/')" class="btn-color1">/</button>
+            <button onclick="appendToDisplay('*')" class="btn-color1">x</button>
+        </div>
+
+        <div class="buttons-2">
+            <button onclick="reset()" class="btn-color2">RESET</button>
+            <button onclick="calculate()" class="btn-color3">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+:root {
+    --background-color: hsl(222, 26%, 31%);
+    --background-screen: hsl(224, 36%, 15%);
+    --background-key: hsl(223, 31%, 20%);
+    --btn-color1: hsl(30, 25%, 89%);
+    --btn-color2: hsl(221, 14%, 31%);
+    --btn-color3: hsl(6, 63%, 50%);
+    --color1: hsl(0, 0%, 100%);
+    --color2: hsl(221, 14%, 31%);
+    --color3: hsl(0, 0%, 100%);
+    --shadow1: hsl(28, 16%, 65%);
+    --shadow2: hsl(224, 28%, 35%);
+    --shadow3: hsl(6, 70%, 34%);
+}
+
+.white-theme {
+    --background-color: hsl(0, 0%, 90%);
+    --background-screen: hsl(0, 0%, 93%);
+    --background-key: hsl(0, 5%, 81%);
+    --btn-color1: hsl(30, 25%, 89%);
+    --btn-color2: hsl(185, 42%, 37%);
+    --btn-color3: hsl(25, 98%, 40%);
+    --color1: hsl(0, 0%, 100%);
+    --color2: hsl(60, 10%, 19%);
+    --color3: hsl(60, 10%, 19%);
+    --shadow1: hsl(35, 11%, 61%);
+    --shadow2: hsl(185, 58%, 25%);
+    --shadow3: hsl(25, 99%, 27%);
+}
+
+.purple-theme {
+    --background-color: hsl(268, 75%, 9%);
+    --background-screen: hsl(268, 71%, 12%);
+    --background-key: hsl(268, 71%, 12%);
+    --btn-color1: hsl(268, 47%, 21%);
+    --btn-color2: hsl(281, 89%, 26%);
+    --btn-color3: hsl(176, 100%, 44%);
+    --color1: hsl(0, 0%, 100%);
+    --color2: hsl(52, 100%, 62%);
+    --color3: hsl(52, 100%, 62%);
+    --shadow1: hsl(290, 70%, 36%);
+    --shadow2: hsl(285, 91%, 52%);
+    --shadow3: hsl(177, 92%, 70%);
+}
+
+html, body {
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+#head {
+    width: 90%;
+    max-width: 370px;
+    align-items: center;
+    margin-bottom: 0.8em;
+}
+
+#head h1 {
+    color: var(--color3);
+    font-size: 1.5rem;
+}
+
+#sub-header {
+    align-items: center;
+    justify-content: center;
+}
+
+#sub-header h2 {
+    color: var(--color3);
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    margin-right: 2em;
+}
+
+#sub-header span {
+    padding: 2px 5px;
+    color: var(--color3);
+    font-size: 0.6rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.space {
+    justify-content: space-between;
+}
+
+.container {
+    position: relative;
+    width: 50px;
+    height: 20px;
+    background-color: var(--background-key);
+    border-radius: 1em;
+}
+
+.circle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--btn-color3);
+    border-radius: 50%;
+    left: 2px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    transition: left 0.3s ease;
+}
+
+.centered {
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    left: calc(100% - 12px);
+}
+
+
+/* ---------------------Main Calculator -----------------------*/
+
+.calculator {
+    width: 90%;
+    max-width: 370px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    line-height: 1.5em;
+    box-sizing: border-box;
+    border-style: none;
+    border-radius: 8px;
+    background-color: var(--background-screen);
+    color: var(--color3);
+    font-family: inherit;
+    font-size: 2.5em;
+}
+
+.buttons-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--background-key);
+    padding: 1.2em;
+    gap: 10px;
+    border-radius: 10px 10px 0 0;
+    margin-top: 1.5em;
+}
+
+.buttons-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    background-color: var(--background-key);
+    padding: 0 1.2em 1.2em 1.2em;
+    border-radius: 0 0 10px 10px;
+}
+
+button {
+    width: 100%;
+    background-color: var(--btn-color1);
+    padding: 10px;
+    font-size: 1.5rem;
+    font-family: inherit;
+    border-style: none;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.btn-color1 {
+    color: var(--color2);
+    box-shadow: 0 3px var(--shadow1);
+}
+
+.btn-color2 {
+    background-color: var(--btn-color2);
+    color: var(--color1);
+    box-shadow: 0 3px var(--shadow2);
+}
+
+.btn-color3 {
+    background-color: var(--btn-color3);
+    color: var(--color1);
+    font-family: inherit;
+    box-shadow: 0 3px var(--shadow3);
+}
